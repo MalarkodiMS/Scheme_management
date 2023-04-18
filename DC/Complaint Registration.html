@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Complaint Registration</title>
+    <link rel="icon" type="image/x-icon" href="DC Logo.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <style>
+        #mic {
+            margin-top: -1%;
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row px-3">
+            <div class="col-lg-10 col-xl-9 card flex-row mx-auto px-0">
+                <div class="card-body">
+                    <h4 class="title text-center mt-4">Complaint Registration</h4>
+                    <form class="form-box px-3">
+                        <div class="form-input">
+                            <span><i class="fa fa-envelope-o"></i></span>
+                            <input type="name" name="" placeholder="Name" tabindex="10" required>
+                        </div>
+                        <div class="form-input">
+                            <input type="from" name="" placeholder="From" required>
+                        </div>
+                        <div class="form-input">
+                            <input type="scheme_name" name="" placeholder="Scheme Name" required>
+                        </div>
+                        <div class="form-input">
+                            <input type="officer_name" name="" placeholder="Officer Name" required>
+                        </div>
+                        <div class="form-input">
+                            <input type="Subject" name="" placeholder="Subject" required style="width:700px;"> <span id="mic"><i class="fa-solid fa-microphone"></i></span>
+                        </div>
+                        <center>Proof : <input type="file" accept="image/*,.pdf" / required></center>
+                        <div class="mb-3">
+                            <button type="submit" class="btn btn-block text-uppercase" onclick="alert('Sucessfully Received')" style="width:200px;margin-left:40%;">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,264 @@
+<!doctype html>
+
+<head>
+    <title>Direct Complaint</title>
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+        
+        li {
+            float: left;
+            border-right: 1px solid #bbb;
+        }
+        
+        li:last-child {
+            border-right: none;
+        }
+        
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        
+        .layoutSection {
+            background-color: #3F51B5;
+            color: rgb(255, 255, 255);
+            opacity: 5;
+            border-radius: 10px;
+            transition: all 1s ease-in-out;
+        }
+        
+        {
+            box-sizing: border-box
+        }
+        
+        body {
+            font-family: Verdana, sans-serif;
+            margin: 0
+        }
+        
+        .mySlides {
+            display: none
+        }
+        
+        img {
+            vertical-align: middle;
+        }
+        
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+        
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+        
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        /* Caption text */
+        
+        .text {
+            color: red;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+        /* Number text (1/3 etc) */
+        
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+        
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+        
+        .active,
+        .dot:hover {
+            background-color: blue;
+        }
+        
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+        
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+            to {
+                opacity: 1
+            }
+        }
+        
+        @media only screen and (max-width: 300px) {
+            .prev,
+            .next,
+            .text {
+                font-size: 11px
+            }
+        }
+        
+        footer {
+            text-align: center;
+            padding: 3px;
+            background-color: darkblue;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><a class="active" href="Home.html">Home</a></li>
+        <li><a href="Schemes%20Info.html">Schemes</a></li>
+        <li><a href="Application%20Status.html">Application Status</a></li>
+        <li><a href="Complaint%20Registration.html">Complaint Registration</a></li>
+        <li style="float:right"><a href="Home.html">Log out</a></li>
+        <li style="float:right"><a href="Contact%20Us.html">Contact Us</a></li>
+    </ul>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 7</div>
+            <img src="1.jpg" style="width:100%">
+            <div class="text">Caption One</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">2 / </div>
+            <img src="3.jpg" style="width:100%">
+            <div class="text">Caption Two</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 6</div>
+            <img src="4.jpg" style="width:100%">
+            <div class="text">Caption Three</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">4 / 6</div>
+            <img src="5.jpg" style="width:100%">
+            <div class="text">Caption Four</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">5 / 6</div>
+            <img src="6.jpg" style="width:100%">
+            <div class="text">Caption Five</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">6 / 6</div>
+            <img src="7.jpg" style="width:100%">
+            <div class="text">Caption Six</div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+    </div>
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+    </div>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+    <h3>How it works?</h3>
+    <p>&emsp; &emsp; &emsp; Our platform is on the basis of communicating between the people and the government about the people's problem.</p>
+    <p>&emsp; &emsp; &emsp; The people's problem can be solved by conveying their messages to the respective government officials.</p>
+    <p>&emsp; &emsp; &emsp; If the respective goverment officials are not responding to their duties then the people can able to complaint about their problem by facing the government officials with the proof attached.</p>
+    <p>&emsp; &emsp; &emsp; Their problem has been now transfered to the superior of that government official both their own problem and by the goverment officials side.</p>
+    <p>&emsp; &emsp; &emsp; They can easily follow up to their respective schemes that they have applied (or) registered for.</p>
+    <h3>Who are all related?</h3>
+    <p>&emsp; &emsp; &emsp; Though it is a platform between the government officials and people so , all the respective govenment officials are related.</p>
+    <p>&emsp; &emsp; &emsp; The media persons and social activists are also related.</p>
+    <h3>Why they are related?</h3>
+    <p>&emsp; &emsp; &emsp; Goverment officials are related to solve the problem faced by the people (or) the problem raised by the prespective government official.</p>
+    <p>&emsp; &emsp; &emsp; Peoples are related to tell about their problems both by applying schemes and by government officials</p>
+    <p>&emsp; &emsp; &emsp; Media peronaliteies are related to make awarness of this portal and to exploit about the feelings of both people and government officails.</p>
+    <h3>Security Features.</h3>
+    <p>&emsp; &emsp; &emsp; Many of the peoples will think that while transmitting our data through this platform is secured?</p>
+    <p>&emsp; &emsp; &emsp; Our platform is not a place for storge unit. So , we don't store any data and it is just transmitting the data between the two parties.</p>
+    <p>&emsp; &emsp; &emsp; It is a one-to-one data transmitting area that is government officials-people (or) people-government officials.</p>
+    <h3>Additional Features.</h3>
+    <p>&emsp; &emsp; &emsp; Our platform can be used for the native languagers by their own languages.</p>
+    <p>&emsp; &emsp; &emsp; Our platform can also have features like Voice Recgnition which will be used for Quick documentation.</p>
+    <p>&emsp; &emsp; &emsp; It also has a podcast for the people who dont know to read the documentation process.</p>
+</body>
+<footer>
+    <p> Developed by DTE Students from KEC
+        <p>
+            <p>Copyright &copy; 2022</p>
+</footer>

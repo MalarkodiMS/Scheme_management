@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="DC Logo.png">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        #myInput {
+            background-image: url('/css/searchicon.png');
+            background-position: 10px 12px;
+            background-repeat: no-repeat;
+            width: 100%;
+            font-size: 16px;
+            padding: 12px 20px 12px 40px;
+            border: 1px solid #ddd;
+            margin-bottom: 12px;
+        }
+        
+        #myUL {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        #myUL li a {
+            border: 1px solid #ddd;
+            margin-top: -1px;
+            /* Prevent double borders */
+            background-color: #f6f6f6;
+            padding: 12px;
+            text-decoration: none;
+            font-size: 18px;
+            color: black;
+            display: block
+        }
+        
+        #myUL li a:hover:not(.header) {
+            background-color: skyblue;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 3px;
+            background-color: darkblue;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>List of Schemes</h2>
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Your Schemes" title="Type in a name">
+    <ul id="myUL">
+        <li><a href="#">Pradhan Mantri Swasthya Suraksha Nidhi</a></li>
+        <li><a href="#">Ayushman Bharat Pradhan Mantri Jan Aarogya Yojna</a></li>
+        <li><a href="#">National Digital Health Mission</a></li>
+        <li><a href="#">Pradhan Mantri Swasthya Suraksha Yojna</a></li>
+        <li><a href="#">Intensified Mission Indradhanush 3.0</a></li>
+        <li><a href="#">STARS Project</a></li>
+        <li><a href="#">Institutions of Eminence Scheme</a></li>
+        <li><a href="#">Mid-May Meal</a></li>
+        <li><a href="#">Swach Vidyalaya Abhiyan</a></li>
+        <li><a href="#">Kala Utsav</a></li>
+        <li><a href="#">Shikshav Parv Initiative</a></li>
+        <li><a href="#">Scheme for Promotion of Academic and Research Collaboration  (SPARC)</a></li>
+        <li><a href="https://hefa.co.in/">Higher Education Financing Agency (HEFA)</a></li>
+        <li><a href="#">Pradhan Mantri Matru Vandana Yojna</a></li>
+        <li><a href="#">Poshan Abhiyan</a></li>
+        <li><a href="#">Rashtriya Poshan Maah</a></li>
+        <li><a href="#">Pradhan Mantri Kaushal Vikas Yojna</a></li>
+        <li><a href="#">Unique Land Parcel Identification Number (ULPIN) Scheme</a></li>
+        <li><a href="#">National Social Assistance Programme (NSAP)Student</a></li>
+        <li><a href="#">Mahatma Gandhi National Rural Employment Guarantee Scheme (MGNREGS)</a></li>
+        <li><a href="#">Rashtriya Aajivika Mission</a></li>
+        <li><a href="#">Gram Panchayat Development Plans</a></li>
+        <li><a href="#">Startup Village Entrepreneurship Programme</a></li>
+        <li><a href="#">DDU Grameen Kaushalya Yojna</a></li>
+        <li><a href="#">Pradhan Mantri Awas Yojna</a></li>
+        <li><a href="#">Global Housing Technology Challenge</a></li>
+        <li><a href="#">Safaimitra Suraksha Challenge</a></li>
+        <li><a href="#">PM SVANIDI</a></li>
+        <li><a href="#">Climate-Smart City Assessment Framework</a></li>
+        <li><a href="#">Swachh Sarvekshan 2021</a></li>
+        <li><a href="#">Rashtriya Swachhta Kendra</a></li>
+        <li><a href="#">Grand ICT Challenge</a></li>
+        <li><a href="#">Ambekar Social Innovation & Incubation Mission</a></li>
+        <li><a href="#">One District One Product Scheme</a></li>
+        <li><a href="#">PRARAMBH: Startup India International Summit</a></li>
+        <li><a href="#">Merchandise Export From India Scheme</a></li>
+        <li><a href="#">Saral Jeevan Bima</a></li>
+        <li><a href="#">SAMARTH Scheme</a></li>
+        <li><a href="#">National Technical Textile Mission</a></li>
+        <li><a href="#">Sagarmala Sea Plane Services</a></li>
+        <li><a href="#">National Authority For Recycling of Ships</a></li>
+        <li><a href="#">Atal Beemit Vyakti Kalyan Yojna</a></li>
+        <li><a href="#">Nation Career Service Project</a></li>
+        <li><a href="#">Bureau of Indian Standards</a></li>
+        <li><a href="#">Consumer Protection (Ecommerce) Rules, 2020</a></li>
+        <li><a href="#">MPLADS (Members of Parliament Local Area Development Scheme)</li></a></li>
+        <li><a href="#">Vision 2035</li></a></li>
+        <li><a href="#">NPMPF (‘National Program and Project Management Policy Framework’)</li></a></li>
+        <li><a href="#">Aatmanirbhar Bharat ARISE-Atal New India Challenge</li></a></li>
+        <li><a href="#">Startup India Seed Fund Scheme (SISFS)</li></a></li>
+    </ul>
+    <script>
+        function myFunction() {
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myUL");
+            li = ul.getElementsByTagName("li");
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+<footer>
+    <p> Developed by DTE Students from KEC
+        <p>
+            <p>Copyright &copy; 2022</p>
+</footer>
+
+</html>
